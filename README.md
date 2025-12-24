@@ -1,4 +1,4 @@
-# Buatkamu<!DOCTYPE html>
+<index.html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -48,36 +48,28 @@
             50% { transform: scale(1.2); }
             100% { transform: scale(1); }
         }
-        iframe {
-            width: 0;
-            height: 0;
-            border: 0;
-        }
     </style>
 </head>
 <body>
 
 <div class="box">
     <div id="nama"></div>
-    <p>Klik love kalau lagi kangen aku 🥺</p>
+    <p>Klik ❤️ kalau lagi kangen aku 🥺</p>
 
     <!-- Emoji love -->
     <div class="heart" onclick="klikLove()">❤️</div>
 
     <!-- Tombol lagu -->
-    <button onclick="playYT()">▶ Putar Lagu</button>
+    <button onclick="playMusic()">▶ Putar Lagu</button>
 
     <div id="pesan"></div>
 </div>
 
-<!-- YouTube Player (ganti VIDEO_ID) -->
-<iframe
-    id="ytplayer"
-    src="https://www.youtube.com/embed/VIDEO_ID?enablejsapi=1"
-    allow="autoplay">
-</iframe>
+<!-- Lagu lokal -->
+<audio id="lagu">
+    <source src="lagu.mp3" type="audio/mpeg">
+</audio>
 
-<script src="https://www.youtube.com/iframe_api"></script>
 <script>
 /* Animasi ketik nama */
 const text = "Hai Rin Ramadhani ❤️";
@@ -107,13 +99,12 @@ function klikLove() {
     index = (index + 1) % pesanBucin.length;
 }
 
-/* YouTube player */
-let player;
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('ytplayer');
+/* Putar lagu */
+function playMusic() {
 }
-function playYT() {
-    if (player) player.playVideo();
+    {musik/lagu MP3 
+    }
+    document.getElementById("lagu").play();
 }
 </script>
 
